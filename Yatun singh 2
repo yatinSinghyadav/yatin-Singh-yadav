@@ -1,0 +1,103 @@
+Question 1
+Write a Python program to remove empty List from List.
+Ans-1)
+
+# Python3 code to demonstrate  
+# Remove empty List from List 
+# using list comprehension 
+
+  
+# Initializing list  
+
+test_list = [5, 6, [], 3, [], [], 9] 
+
+  
+# printing original list  
+
+print("The original list is : " + str(test_list)) 
+
+  
+# Remove empty List from List 
+# using list comprehension 
+
+res = [ele for ele in test_list if ele != []] 
+
+  
+# printing result  
+
+print ("List after empty list removal : " + str(res))
+
+
+
+Question 2
+Write a Python program to remove all duplicates words from a given sentence
+Ans-2)
+
+from collections import Counter 
+
+  
+
+def remov_duplicates(input): 
+
+  
+
+    # split input string separated by space 
+
+    input = input.split(" ") 
+
+  
+
+    # joins two adjacent elements in iterable way 
+
+    for i in range(0, len(input)): 
+
+        input[i] = "".join(input[i]) 
+
+  
+
+    # now create dictionary using counter method 
+
+    # which will have strings as key and their  
+
+    # frequencies as value 
+
+    UniqW = Counter(input) 
+
+  
+
+    # joins two adjacent elements in iterable way 
+
+    s = " ".join(UniqW.keys()) 
+
+    print (s) 
+
+  
+# Driver program 
+
+if __name__ == "__main__": 
+
+    input = 'Python is great and Java is also great'
+
+    remov_duplicates(input) 
+
+
+Question 3
+Write a Python program to find all occurrences of a character in the given string
+Ans-3)
+
+
+# Python3 code to program to find occurrence 
+# to each character in given string 
+
+  
+# initializing string  
+
+inp_str = "GeeksforGeeks"
+
+  
+# using set() + count() to get count  
+# of each element in string  
+out = {x : inp_str.count(x) for x in set(inp_str )}  
+
+  
+# printing result
