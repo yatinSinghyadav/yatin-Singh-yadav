@@ -1,0 +1,79 @@
+Question 1
+Write a Python program to merge two files into a third file.
+Ans-1)
+
+
+# Python program to 
+# demonstrate merging 
+# of two files 
+
+  
+
+data = data2 = "" 
+
+  
+# Reading data from file1 
+
+with open('file1.txt') as fp: 
+
+    data = fp.read() 
+
+  
+# Reading data from file2 
+
+with open('file2.txt') as fp: 
+
+    data2 = fp.read() 
+
+  
+# Merging 2 files 
+# To add the data of file2 
+# from next line 
+
+data += "\n"
+
+data += data2 
+
+  
+
+with open ('file3.txt', 'w') as fp: 
+
+    fp.write(data) 
+
+
+
+
+Question 2
+Take two lists as input list1 = [1,2,3,4,5] and list2 = ["a", "b", "c", "d", "e"] From that make a
+dictionary ouput {1:"a", 2:"b", 3:"c", 4:"d", 5:"e"}
+Ans-2)
+
+
+# Python3 code to demonstrate  
+# conversion of lists to dictionary 
+# using dictionary comprehension 
+
+  
+# initializing lists 
+
+list2 = ["a", "b", "c", "d", "e"] 
+
+list1 = [1, 2, 3, 4, 5] 
+
+  
+# Printing original keys-value lists 
+
+print ("Original key list is : " + str(list2)) 
+
+print ("Original value list is : " + str(list1)) 
+
+  
+# using dictionary comprehension 
+# to convert lists to dictionary 
+
+res = {list2[i]: list1[i] for i in range(len(list2))} 
+
+  
+# Printing resultant dictionary  
+
+print ("Resultant dictionary is : " +  str(res))
